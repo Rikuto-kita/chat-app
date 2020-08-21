@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :tweets
   # devise_for :rooms
   devise_for :users
   root "rooms#index"
