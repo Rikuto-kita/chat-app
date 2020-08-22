@@ -13,13 +13,13 @@ def create
   else
     @messages = @room.messages.includes(:user)
     render :index
-end
+  end
 end
 
 private
 
 def message_params
-  params.require(:message).permit(:content).merge(user_id: current_user.id)
+  params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
 end
 
 
